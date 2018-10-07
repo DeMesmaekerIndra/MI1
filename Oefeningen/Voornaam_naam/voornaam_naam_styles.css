@@ -1,1 +1,28 @@
+h1{    
+    padding: 15px;
+    background-color: #008000;
+    color: white;
+}
+h2{
+    margin: 5px;
+    background-color: lightgreen;
+    color: black;    
+}
 
+
+a:link{
+    color: green;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: #B7E08B;
+}
+a:active{
+    color: #B7E08B;
+    text-decoration: underline;
+}
+a:visited{
+    color: darkgreen;
+    text-decoration: none;
+}
