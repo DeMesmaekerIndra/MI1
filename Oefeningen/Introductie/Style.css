@@ -1,17 +1,17 @@
 h1{    
-    padding: 15px;
+    padding: 3%;
     background-color: #008000;
     color: white;
 }
 h2{
-    padding: 5px;
+    padding: 1%;
     background-color: lightgreen;
     color: black;    
+    margin-right: 5%;
 }
-p{
-    padding: 0.5em;
-    padding-right: 25%;
+p{     
     margin-left: 1%;
+    margin-right: 5%;
 }
 ul{
     margin-left: 1%;
