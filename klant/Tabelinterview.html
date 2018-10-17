@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 
 <head>
@@ -10,52 +10,57 @@
         table {
             border: 1px solid black;
             border-collapse: collapse;
-            padding: 0.5em;
+            padding: 0.3em;
             text-align: center;
         }
-
         .Selected {
             background-color: lightgreen;
+        }
+        caption {
+            text-align: left;
         }
     </style>
 </head>
 
 <body>
-    <table>
+    <table title="Overzich vereisten">
+        <caption>
+            <h1>Overzicht vereisten</h1>
+        </caption>
         <tr>
-            <th>Vereisten</th>
-            <th>Heel belangerijk</th>
-            <th>Belangerijk</th>
-            <th>Gevraagd</th>
+            <th id="V">Vereisten</th>
+            <th id="H">Heel belangerijk</th>
+            <th id="B">Belangerijk</th>
+            <th id="G">Gevraagd</th>
         </tr>
         <tr>
-            <th>Menu van de week moet getoond worden</th>
+            <th headers="V">Menu van de week moet getoond worden</th>
             <td></td>
-            <td class="Selected">X</td>
-            <td></td>
-        </tr>
-        <tr>
-            <th>Contactgegevens</th>
-            <td class="Selected">X</td>
-            <td></td>
+            <td class="Selected" headers="B">X</td>
             <td></td>
         </tr>
         <tr>
-            <th>Huidige kindjes van cribbe voorstellen</th>
+            <th headers="V">Contactgegevens</th>
+            <td class="Selected" headers="H">X</td>
             <td></td>
-            <td class="Selected">X</td>
             <td></td>
         </tr>
         <tr>
-            <th>Gebruiker wil zelf berichten op site toevoegen</th>
+            <th headers="V">Huidige kindjes van cribbe voorstellen</th>
             <td></td>
+            <td class="Selected" headers="B">X</td>
             <td></td>
-            <td class="Selected">X</td>
         </tr>
         <tr>
-            <th>Gebruik van roos en lichte kleuren</th>
+            <th headers="V">Gebruiker wil zelf berichten op site toevoegen</th>
             <td></td>
-            <td class="Selected">X</td>
+            <td></td>
+            <td class="Selected" headers="G">X</td>
+        </tr>
+        <tr>
+            <th headers="V">Gebruik van roos en lichte kleuren</th>
+            <td></td>
+            <td class="Selected" headers="B">X</td>
             <td></td>
         </tr>
     </table>
