@@ -68,3 +68,18 @@ nav>*{
     border-bottom-right-radius: 0; 
 }
 /*Navigation bar*/
+
+/*Links*/
+a:hover{
+    text-decoration: underline;
+    background-color: rgb(46, 177, 46);
+}
+a:active{
+    background-color: rgb(62, 238, 62)
+}
+a:visited{
+    
+}
+
+
+/*Links*/
