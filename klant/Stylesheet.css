@@ -1,0 +1,70 @@
+/*Algemene indeling pagina*/
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url("bronmateriaal/fadingBackground.jpg");       
+    background-repeat: no-repeat;        
+}   
+.container{         
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto auto;
+    grid-template-areas: "menu" 
+                         "mainbody"
+                         "footer";
+}
+/*Algemene indeling pagina*/
+
+/*Navigation bar*/
+.menu{
+    grid-area: menu;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: inherit;
+    grid-template-areas: "logo home foodmenu activities aboutus";         
+
+    background-color: green;   
+
+    grid-column-gap: 5px;  
+}   
+nav>*{
+    background-color: lightgreen;
+    text-align: center;       
+    padding-top: 32PX;
+    
+    text-decoration: none;
+    color: black;   
+    font-size: 1.5em; 
+
+    border-style:solid;
+    border-width: 2px; 
+    border-radius: 40px;
+}
+.logo{
+    grid-area: logo;
+    
+    background-image: url("bronmateriaal/logo_kindEnGezin.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.home{
+    grid-area: home;
+}
+.foodmenu{
+    grid-area: foodmenu;
+}
+.activities{
+    grid-area: activities;
+}
+.aboutus{
+    grid-area: aboutus;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; 
+}
+/*Navigation bar*/

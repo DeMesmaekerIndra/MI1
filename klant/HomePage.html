@@ -1,150 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Thuis pagina</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <link rel="stylesheet" href="Stylesheet.css">
+    <style>       
+        .home{
+            background-color: rgb(46, 177, 46);
+        }
+    
+        /*Main body*/
+        .mainbody{
+            grid-area: mainbody;
+    
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: inherit;
+            grid-template-areas: "header"
+                                 "section1"
+                                 "section2";
+        }
+    
+        .header{grid-area: header;}   
+        /*Main body: section*/
+    
+        section{
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-template-areas: inherit;
+            grid-template-areas: "header header"
+                                 "text image";
+        }
+        .section1{        
+            grid-area: section1;       
+        }
+        .section2{        
+            grid-area: section2;       
+        }
+        .sectionHeader{grid-area: header;}
+        .content{grid-area: text;}
+        .image{grid-area:image;}
+        /*Main body: section*/
+        /*Main Body*/
+    
+        /*Footer*/
+        footer{
+            display: grid;
+            grid-area: footer;  
+    
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: 70px auto;
+            grid-template-areas:"footerHeader footerHeader"
+                                "parentCompany childCompany";        
+        }
+    
+        .footerHeader{
+            grid-area: footerHeader;
+            font-size: 1.3em;        
+        }
+        .parentCompany{
+            grid-area: parentCompany;     
+        }
+        .childCompany{
+            grid-area: childCompany;
+        }    
+        /*Footer*/
+    </style>
 </head>
+    
 
-<style>
-    body{
-        padding: 0;
-        margin: 0;
-        background-image: url("bronmateriaal/fadingBackground.jpg");       
-        background-repeat: no-repeat;        
-    }
-    .container{         
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 100px auto auto;
-        grid-template-areas: "menu" 
-                             "mainbody"
-                             "footer";   
-    }  
-
-    /*Navigation bar*/
-    .menu{
-        grid-area: menu;
-
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: inherit;
-        grid-template-areas: "logo home foodmenu activities aboutus";         
-
-        background-color: green;   
-
-        grid-column-gap: 5px;  
-    }   
-    nav>*{
-        background-color: lightgreen;
-        text-align: center;       
-        padding-top: 35px;
-        
-        text-decoration: none;
-        color: black;   
-        font-size: 1.5em; 
-
-        border-style:solid;
-        border-width: 2px; 
-        border-radius: 40px;
-    }
-    .logo{
-        grid-area: logo;
-        
-        background-image: url("bronmateriaal/logo_kindEnGezin.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-    .home{
-        grid-area: home;
-    }
-    .foodmenu{
-        grid-area: foodmenu;
-    }
-    .activities{
-        grid-area: activities;
-    }
-    .aboutus{
-        grid-area: aboutus;
-
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0; 
-    }
-    /*Navigation bar*/ 
-
-    /*Main body*/
-    .mainbody{
-        grid-area: mainbody;
-
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: inherit;
-        grid-template-areas: "header"
-                             "section1"
-                             "section2";
-    }
-
-    .header{grid-area: header;}   
-    /*Main body: section*/
-
-    section{
-        display: grid;
-        grid-template-columns: 65% 35%;
-        grid-template-areas: inherit;
-        grid-template-areas: "header header"
-                             "text image";
-    }
-    .section1{        
-        grid-area: section1;       
-    }
-    .section2{        
-        grid-area: section2;       
-    }
-    .sectionHeader{grid-area: header;}
-    .content{grid-area: text;}
-    .image{grid-area:image;}
-    /*Main body: section*/
-    /*Main Body*/
-
-    /*Footer*/
-    footer{
-        display: grid;
-        grid-area: footer;  
-
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: 70px auto;
-        grid-template-areas:"footerHeader footerHeader"
-                            "parentCompany childCompany";        
-    }
-
-    .footerHeader{
-        grid-area: footerHeader;
-        font-size: 1.3em;        
-    }
-    .parentCompany{
-        grid-area: parentCompany;     
-    }
-    .childCompany{
-        grid-area: childCompany;
-    }
-
-    /*Footer*/
-</style>
 
 <body>
     <div class="container">
         <nav class="menu">
-            <div class="logo"></div>
-            <a class="home" href=""> Home </a>
-            <a clase="foodmenu" href=""> Menu van de week </a>
-            <a class="activities" href=""> Activiteiten</a>
+            <a class="logo" href="https://www.kindengezin.be/"></a>            
+            <a class="home" href="HomePage.html"> Home </a>
+            <a class="foodmenu" href="FoodPage.html"> Menu van de week </a>
+            <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
             <a class="aboutus" href="">Ons klasje</a>
         </nav>
        
@@ -154,7 +89,7 @@
             <section class="section1">
                 <h2 class="sectionHeader"> Opvang Kind & Gezin</h2>
                 <p class="content">(Informatie over de dienst)</p>
-                <img class="image" src="bronmateriaal/Opvang_welpenNest.jpg" alt="" width="350px">
+                <img class="image" src="bronmateriaal/Opvang_welpenNest.jpg" alt="" width="350">
             </section>
 
             <section class="section2">                
@@ -178,7 +113,7 @@
                     <ul>
                         <li>Adres: Fazantenlaan 27, Sint-Pieters-Leeuw </li>
                         <li>Mail: Anne.flori@hotmail.com </li>
-                        <li>Telefoon: 0 </li>
+                        <li>Telefoon: +32 472 25 59 95 </li>
                     </ul>
                 </address>
         </footer>
