@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Opdracht 33: Maak een invoer formulier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        ul{
+            list-style: none;
+        }
+        .container{             
+            width: 400px;
+            clear: both;
+            margin-top: 5px;
+        }
+        .container>li{
+            padding: 3px;
+        }
+        .container>li>input:not([type="radio"]){
+            width: 100%;
+            clear: both;
+        }       
+        
+    </style>
+</head>
+
+<body>
+    <form action="mailto:indra_dm@hotmail.com" method="POST" enctype="text/plain">
+        <fieldset>
+            <legend>Persoonlijk informatie: </legend>
+            <ul class="container">
+                <li>
+                    <label for="firstname">Voornaam: </label>
+                    <input id="firstname" name="firstname" type="text">
+                </li>
+                <li>
+                    <label for="lastname">AchterNaam: </label>
+                    <input id="lastname" name="lastname" type="text">
+                </li>
+                <li>
+                    <label for="genderItemOne">Selecteer jouw gender: </label> <br>
+                    <input type="radio" name="gender" value="man" id="genderItemOne" checked> Man
+                </li>
+                <li><input type="radio" name="gender" value="vrouw"> Vrouw</li>
+                <li><input type="radio" name="gender" value="andere"> Andere</li>
+                <li>
+                    <label for="mailaddress">mail: </label>
+                    <input id="mailaddress" name="mailaddress" type="text">
+                </li>
+                <li>
+                    <label for="birthdate">Geboorte Datum: </label>
+                    <input type="date" name="birthdate" id="birthdate" value="2000-12-15" min="1940-01-01" max="2018-11-28">
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Bijkomende informatie</legend>
+
+            <ul class="container">
+                <li>
+                    <label for="vakken">Selecteer je favoriete vak(ken): </label> <br>
+                    <select name="vakken" id="vakken" multiple size="6">
+                        <option value="Application development 1">Application development 1</option>
+                        <option value="Software Engineering 1">Software Engineering 1</option>
+                        <option value="Database development 1">Database development 1</option>
+                        <option value="Information management 1">Information management 1</option>
+                        <option value="Communicatietraining 1"> Nederlands</option>
+                        <option value="Communicatetraining 2.1">Frans</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="grade">Beoogde punten voor MI1:</label>
+                    <input style="width: 8%" type="number" name="grade" id="grade" min="10" max="20" value="10">
+                </li>
+                <li>
+                    <label for="days">Leukste dagen van de week: </label>
+                    <ul>
+                        <li><input type="checkbox" value="maandag" name="days" id="maandag"> Maandag</li>
+                        <li><input type="checkbox" value="dinsdag" name="days" id="dinsdag"> Dinsdag</li>
+                        <li><input type="checkbox" value="woensdag" name="days" id="woensdag"> Woensdag</li>
+                        <li><input type="checkbox" value="donderdag" name="days" id="donderdag"> Donderdag</li>
+                        <li><input type="checkbox" value="vrijdag" name="days" id="vrijdag"> Vrijdag</li>
+                        <li><input type="checkbox" value="zaterdag" name="days" id="zaterdag"> ZaterDag</li>
+                        <li><input type="checkbox" value="zondag" name="days" id="zondag"> Zondag</li>
+                    </ul>                    
+                </li>
+                <li>
+                    <label for="remarks">Opmerkingen: </label>
+                    <textarea name="remarks" id="remarks" cols="50" rows="10"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+
+        <input type="submit" value="Verstuur">
+    </form>
+
+</body>
+
+</html>
