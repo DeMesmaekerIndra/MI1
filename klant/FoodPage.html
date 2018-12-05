@@ -4,25 +4,105 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pagina met meny van de week</title>
+    <title>Pagina met menu van de week</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Stylesheet.css" />
     <style>
-        .foodmenu {
+        /*Main Body*/
+        article {
+            grid-area: mainbody;
+
+            display: grid;
+
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 10% 40% 50%;
+            grid-template-areas: "header header"
+                "shortmenu allergies"
+                "longmenu longmenu";
+            row-gap: 20px;
+        }
+
+        h1 {
+            grid-area: header;
+        }
+
+        #shortmenu {
+            grid-area: shortmenu;
+        }
+
+        #allergies {
+            grid-area: allergies;
+        }
+
+        #longmenu {
+            grid-area: longmenu;
+        }
+
+        /*Main Body*/
+
+        #foodmenu {
             background-color: rgb(46, 177, 46);
-        }        
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <nav class="menu">
-            <a class="logo" href="https://www.kindengezin.be/"></a>
-            <a class="home" href="HomePage.html"> Home </a>
-            <a class="foodmenu" href="FoodPage.html"> Menu van de week </a>
-            <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
-            <a class="aboutus" href="AboutPage.html">Ons klasje</a>
+        <nav>
+            <a id="logo" target="_blank" href="https://www.kindengezin.be/"></a>
+            <a id="home" href="HomePage.html"> Home </a>
+            <a id="foodmenu" href="FoodPage.html"> Menu van de week </a>
+            <a id="activities" href="ActivitiesPage.html"> Activiteiten</a>
+            <a id="aboutus" href="AboutPage.html">Ons klasje</a>
         </nav>
+
+        <article>
+
+            <h1> Menu van de week: </h1>
+            <section id="shortmenu">
+                <h2>Kort overzicht: </h2>
+                <ul>
+                    <li>Maandag: </li>
+                    <li>Dinsdag: </li>
+                    <li>Woensdag: </li>
+                    <li>Donderdag: </li>
+                </ul>
+            </section>
+
+            <section id="allergies">
+                <h2>Mogelijke allergieën: </h2>
+                <ul>
+                    <li>Zuivel producten</li>
+                    <li>eieren</li>
+                    <li>Noten</li>
+                    <li>Soja</li>
+                </ul>
+            </section>
+
+            <section id="longmenu">
+                <h2>Lang overzicht: </h2>
+                <img src="" alt="Foto met een uitgebreid overzicht van alle maaltijden.">
+            </section>
+        </article>
+
+        <footer>
+            <h2 id="footerHeader">Contact Informatie: </h2>
+            <address id="parentCompany">
+                <ul>
+                    <li>Adres: Slesbroekstraat 44, 1600 Sint-Pieters-Leeuw </li>
+                    <li>Mail: kinderopvang@sint-pieters-leeuw.be </li>
+                    <li>Telefoon: 02 371 14 35 </li>
+                </ul>
+            </address>
+
+            <address id="childCompany">
+                <ul>
+                    <li>Adres: Fazantenlaan 27, 1600 Sint-Pieters-Leeuw </li>
+                    <li>Mail: Anne.flori@hotmail.com </li>
+                    <li>Telefoon: +32 472 25 59 95 </li>
+                </ul>
+            </address>
+        </footer>
     </div>
 
 </body>

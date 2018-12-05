@@ -7,16 +7,19 @@ body{
 }   
 .container{         
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 2% 92%;
     grid-template-rows: 100px auto auto;
-    grid-template-areas: "menu" 
-                         "mainbody"
-                         "footer";
+    grid-template-areas: ". menu" 
+                         ". mainbody"
+                         ". footer";
 }
 /*Algemene indeling pagina*/
 
 /*Navigation bar*/
-.menu{
+nav{
+    position: fixed;
+    width: 100%;
+
     grid-area: menu;
 
     display: grid;
@@ -41,7 +44,7 @@ nav>*{
     border-width: 2px; 
     border-radius: 40px;
 }
-.logo{
+#logo{
     grid-area: logo;
     
     background-image: url("bronmateriaal/logo_kindEnGezin.png");
@@ -50,18 +53,18 @@ nav>*{
     background-size: contain;
 
     border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;    
 }
-.home{
+#home{
     grid-area: home;
 }
-.foodmenu{
+#foodmenu{
     grid-area: foodmenu;
 }
-.activities{
+#activities{
     grid-area: activities;
 }
-.aboutus{
+#aboutus{
     grid-area: aboutus;
 
     border-top-right-radius: 0;
@@ -70,14 +73,42 @@ nav>*{
 /*Navigation bar*/
 
 /*Links*/
-a:hover{
+a:hover{    
+    transition-delay: 80ms;
+    transform: perspective(1000px) rotateY(25deg);    
     text-decoration: underline;
     background-color: rgb(46, 177, 46);
+    
 }
 a:active{
+    transition-delay: 0ms;
     background-color: rgb(62, 238, 62)
 }
 a:visited{
     
 }
 /*Links*/
+
+/*Footer*/
+footer{
+    display: grid;
+    grid-area: footer;  
+
+    grid-template-columns: 64% 36%;
+    grid-template-rows: 10% auto;
+    grid-template-areas:"footerHeader footerHeader"
+                        "parentCompany childCompany"; 
+    row-gap: 20px;          
+}
+
+#footerHeader{
+    grid-area: footerHeader;
+    font-size: 1.3em;        
+}
+#parentCompany{
+    grid-area: parentCompany;     
+}
+#childCompany{
+    grid-area: childCompany;
+}  
+/*Footer*/  
