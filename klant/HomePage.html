@@ -8,34 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Stylesheet.css">
     <style>
-        #home {
-            background-color: rgb(46, 177, 46);
-        }
-
         /*Main body*/
         article {
             grid-area: mainbody;
 
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 10% 45% 45%;
+            grid-template-rows: 5% auto auto;
             grid-template-areas: "header"
                 "section1"
-                "section2";
+                "section2";                
         }
 
         .header {
-            grid-area: header;
+            grid-area: header;            
         }
 
         /*Main body: section*/
-
         section {
             display: grid;
             grid-template-columns: 65% 35%;
-            grid-template-rows: 10% 90%;
+            grid-template-rows: auto auto;
             grid-template-areas: "header header"
-                "text image";
+                "item1 item2";
             row-gap: 20px;
         }
 
@@ -51,12 +46,12 @@
             grid-area: header;
         }
 
-        .content {
-            grid-area: text;
+        .item1 {
+            grid-area: item1;
         }
 
-        .image {
-            grid-area: image;
+        .item2 {
+            grid-area: item2;         
         }
 
         /*Main body: section*/
@@ -68,10 +63,10 @@
     <div class="container">
         <nav>
             <a id="logo" target="_blank" href="https://www.kindengezin.be/"></a>
-            <a id="home" href="HomePage.html"> Home </a>
-            <a id="foodmenu" href="FoodPage.html"> Menu van de week </a>
-            <a id="activities" href="ActivitiesPage.html"> Activiteiten</a>
-            <a id="aboutus" href="AboutPage.html">Ons klasje</a>
+            <a class="home activePage" href="HomePage.html"> Home </a>
+            <a class="foodmenu" href="FoodPage.html"> Menu van de week </a>
+            <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
+            <a class="aboutus" href="AboutPage.html">Ons klasje</a>
         </nav>
 
         <article>
@@ -79,15 +74,44 @@
 
             <section class="section1">
                 <h2 class="sectionHeader"> Opvang Kind & Gezin</h2>
-                <p class="content">(Informatie over de dienst)</p>
-                <img class="image" src="bronmateriaal/Opvang_welpenNest.jpg" alt="Foto van de kind en gezin afdeling in Sint-Pieters-Leeuw, het Welpennest."
-                    width="350">
+                <div class="item1">
+                    <p>
+                        Kind & Gezin is officieel gevormd in 1984 en zorgd sinds dan al voor de veilige opvang van
+                        kinderen.
+                    </p>
+                    <p>
+                        Ondertussen zijn er in België al een aantal onderverdelingen gebeurt van het originele Kind &
+                        Gezin. Zo zijn er in Sint-Pieters-Leeuw alleen al 4 kinderdagverblijven: De boomhut, de
+                        Speelboot en het Welpennest
+                        waarvan onthaalmoeder Anne Floridor deel uitmaakt.
+                    </p>
+                    <p>
+                        Het Welpennest heeft een vergunning bij Kind en Gezin voor 36 kinderen. Baby's jonger dan 18
+                        maanden worden opgevangen in de babygroep, vanaf 18 maanden kunnen ze terecht in de
+                        peutergroep.
+                    </p>
+                    <p>
+                        Opvang voor kinderen met een specifieke zorgbehoefte kan voorzien worden.
+                    </p>
+                    <p>
+                        Elke leefgroep wordt begeleid door 3 gediplomeerde kindbegeleiders. De dienstverantwoordelijken
+                        staan in voor de dagelijkse werking van de kinderdagverblijven en de ondersteuning van het
+                        personeel. De maaltijden worden in een centrale keuken bereid.
+                    </p>
+                </div>
+
+                <img class="item2" src="bronmateriaal/Opvang_welpenNest.jpg" alt="Foto van de kind en gezin afdeling in Sint-Pieters-Leeuw, het Welpennest."
+                    width="450  ">
             </section>
 
             <section class="section2">
                 <h2 class="sectionHeader">Anne Floridor</h2>
-                <p class="content">(Informatie opvang Anne Floridor)</p>
-                <img class="image" src="" alt="Foto anne floridor">
+                <div class="item2">
+                    <p>(Informatie opvang Anne Floridor)</p>
+                </div>
+                <img class="item1" src="bronmateriaal/Groep_Foto_Buiten.jpg" alt="Foto van onthaalmoeder Anne Floridor met haar opvangkindjes"
+                    width="350">
+                <div class="image"></div>
             </section>
         </article>
 
