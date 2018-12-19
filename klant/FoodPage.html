@@ -7,6 +7,8 @@
     <title>Pagina met menu van de week</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Stylesheet.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <style>
         /*Main Body*/
         article {
@@ -28,7 +30,6 @@
 
         #shortmenu {
             grid-area: shortmenu;
-            background-color: red;
         }
 
         #allergies {
@@ -42,16 +43,14 @@
         /*Main Body*/
 
         /*Collapsible Button*/
-        .Collapsible {
-            background-color: #777;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
+        .Collapsible>ul {
+            list-style-type: none;
+        }
+        .Collapsible>li {
+            list-style-type: none;
+        }
+        .Collapsible>input{
+            visibility: hidden;
         }
         /*Collapsible Button*/
     </style>
@@ -61,7 +60,7 @@
     <div class="container">
         <nav>
             <a id="logo" target="_blank" href="https://www.kindengezin.be/"></a>
-            <a class="home" href="HomePage.html"> Home </a>
+            <a class="home" href="index.html"> Home </a>
             <a class="foodmenu activePage" href="FoodPage.html"> Menu van de week </a>
             <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
             <a class="aboutus" href="AboutPage.html">Ons klasje</a>
@@ -69,10 +68,15 @@
         <article>
             <section id="shortmenu">
                 <h2>Kort overzicht: </h2>
-                <button class=".Collapsible">Week 1:</button>
-                <button class=".Collapsible">Week 2:</button>
-                <button class=".Collapsible">Week 3:</button>
-                <button class=".Collapsible">Week 4:</button>
+                <div class="Collapsible">                   
+                   <i class="fas fa-angle-down"></i>                   
+                    <label for="Week_1"> Week 1:</label>
+                    <ul>
+                        <li>Maandag:</li>
+                        <li>Dinsdag:</li>
+                        <li>DonderDag:</li>
+                    </ul>
+                </div>
             </section>
 
             <section id="allergies">
