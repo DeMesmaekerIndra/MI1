@@ -42,22 +42,37 @@
 
         /*Main Body*/
 
-        /*Collapsible Button*/
-        .Collapsible>ul {
-            list-style-type: none;
+        /*Collapsible Menu*/        
+
+        .Collapsible-menu{
+            padding: 0px 30px 0 0;            
         }
-        .Collapsible>li {
-            list-style-type: none;
-        }
-        .Collapsible>input{
-            background-image: url("klant/BasisOpmaak/bronmateriaal/Drop_down.png");
-            width: 50px;
+
+        input{
             display: none;
+        }  
+        input:checked ~ .menu-content{
+            max-height: 100%;
         }
-        .Collapsible>label{
-            background-image: url("klant/BasisOpmaak/bronmateriaal/Drop_down.png");
+        .Collapsible-menu label{
+            display: block;
+            cursor: pointer;
+            padding: 10px 0 0 20px; 
         }
-        /*Collapsible Button*/
+        i{
+            padding-right: 5px;
+        }
+
+        .menu-content{
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 0 0 40px;
+        }       
+        .Collapsible-menu ul{
+            list-style-type: none;
+            padding: 0;
+        }         
+        /*Collapsible Menu*/
     </style>
 </head>
 
@@ -73,15 +88,56 @@
         <article>
             <section id="shortmenu">
                 <h2>Kort overzicht: </h2>
-                <div class="Collapsible">                   
-                    <input id="week_1" type="checkbox">              
-                    <label for="Week_1"> Week 1:</label>
-                    <ul>
-                        <li>Maandag:</li>
-                        <li>Dinsdag:</li>
-                        <li>DonderDag:</li>
-                    </ul>
+
+                <div class="Collapsible-menu">
+                    <input type="checkbox" id="menu_week1">
+                    <label for="menu_week1"> <i class="fas fa-sort"></i> Menu week 1</label>
+                    <div class="menu-content">
+                        <ul>
+                            <li> <b>Maandag:</b> aardappelen/witloof/vis</li>
+                            <li> <b>Dinsdag:</b> aardappelen/pinazie/americain</li>
+                            <li> <b>Woensdag:</b> aardappelen/tomaat/vis</li>
+                            <li> <b>Donderdag:</b> aardappelen/courgette/varkensvlees</li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="Collapsible-menu">
+                    <input type="checkbox" id="menu_week2">
+                    <label for="menu_week2"> <i class="fas fa-sort"></i> Menu week 2</label>
+                    <div class="menu-content">
+                        <ul>
+                            <li> <b>Maandag:</b> aardappelen/knolselder/vis</li>
+                            <li> <b>Dinsdag:</b> aardappelen/broccoli/kip</li>
+                            <li> <b>Woensdag:</b> aardappelen/pompoen/kalfsvlees</li>
+                            <li> <b>Donderdag:</b> aardappelen/bloemkool/zalm</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Collapsible-menu">
+                    <input type="checkbox" id="menu_week3">
+                    <label for="menu_week3"> <i class="fas fa-sort"></i> Menu week 3</label>
+                    <div class="menu-content">
+                        <ul>
+                            <li> <b>Maandag:</b> aardappelen/snijbonen/varkensvlees</li>
+                            <li> <b>Dinsdag:</b> aardappelen/chinese kool/vis</li>
+                            <li> <b>Woensdag:</b> aardappelen/tomaat/kip</li>
+                            <li> <b>Donderdag:</b> aardappelen/wortel/rundsvlees</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Collapsible-menu">
+                    <input type="checkbox" id="menu_week4">
+                    <label for="menu_week4"> <i class="fas fa-sort"></i> Menu week 4</label>
+                    <div class="menu-content">
+                        <ul>
+                            <li> <b>Maandag:</b> aardappelen/kervel/vis</li>
+                            <li> <b>Dinsdag:</b> aardappelen/venkel/kalkoen</li>
+                            <li> <b>Woensdag:</b> aardappelen/pompoen/kalfsvlees</li>
+                            <li> <b>Donderdag:</b> aardappelen/princessen bonen/rundsvlees</li>
+                        </ul>
+                    </div>
+                </div>
+
             </section>
 
             <section id="allergies">
