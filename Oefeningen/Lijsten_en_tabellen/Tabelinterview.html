@@ -32,6 +32,28 @@
         .Selected {
             background-color: lightgreen;
         }
+
+        /*
+            Opdracht 31: selectors
+        */
+        
+        td:first-of-type{
+            background-color: red;
+        }
+        td:last-child{
+            background-color: orange;
+        }
+        td[target="randomTarget"]{
+            background-color: blue;
+        }
+        td:nth-child(3):not([class="Selected"]):not([target="randomTarget"]){
+            background-color: darkgreen;
+        }
+
+       td:last-of-type:not([class="Selected"]){
+           background-color: darkorange;
+       }
+
     </style>
 </head>
 
@@ -55,7 +77,7 @@
         <tr>
             <th headers="V">Contactgegevens</th>
             <td class="Selected" headers="H">X</td>
-            <td></td>
+            <td target="randomTarget"></td>
             <td></td>
         </tr>
         <tr>
@@ -66,7 +88,7 @@
         </tr>
         <tr>
             <th headers="V">Gebruiker wil zelf berichten op site toevoegen</th>
-            <td></td>
+            <td target="randomTarget"></td>
             <td></td>
             <td class="Selected" headers="G">X</td>
         </tr>

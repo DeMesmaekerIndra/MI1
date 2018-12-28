@@ -50,7 +50,12 @@
             list-style-type: none;
         }
         .Collapsible>input{
-            visibility: hidden;
+            background-image: url("klant/BasisOpmaak/bronmateriaal/Drop_down.png");
+            width: 50px;
+            display: none;
+        }
+        .Collapsible>label{
+            background-image: url("klant/BasisOpmaak/bronmateriaal/Drop_down.png");
         }
         /*Collapsible Button*/
     </style>
@@ -69,7 +74,7 @@
             <section id="shortmenu">
                 <h2>Kort overzicht: </h2>
                 <div class="Collapsible">                   
-                   <i class="fas fa-angle-down"></i>                   
+                    <input id="week_1" type="checkbox">              
                     <label for="Week_1"> Week 1:</label>
                     <ul>
                         <li>Maandag:</li>
