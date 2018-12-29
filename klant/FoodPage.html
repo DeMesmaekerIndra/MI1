@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="Stylesheet.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
+
     <style>
         /*Main Body*/
         article {
@@ -17,7 +18,7 @@
             display: grid;
 
             grid-template-columns: 50% 50%;
-            grid-template-rows: 10% auto 50%;
+            grid-template-rows: auto auto auto;
             grid-template-areas: "header header"
                 "shortmenu allergies"
                 "longmenu longmenu";
@@ -26,6 +27,7 @@
 
         h1 {
             grid-area: header;
+            font-size: 30px;
         }
 
         #shortmenu {
@@ -38,14 +40,25 @@
 
         #longmenu {
             grid-area: longmenu;
-        }
 
+            display: grid;
+
+            grid-template-columns: 50% auto ;
+            grid-template-rows: auto;
+            grid-template-areas: "info . img";
+        }
         /*Main Body*/
 
         /*Collapsible Menu*/        
 
         .Collapsible-menu{
-            padding: 0px 30px 0 0;            
+            padding: 0px 30px 0 0;  
+            width: 70%;
+            border: 1px solid black; 
+            background-color: lightgreen;                     
+        }
+        .Collapsible-menu:hover{
+            background-color: rgb(46, 177, 46);
         }
 
         input{
@@ -57,6 +70,7 @@
         .Collapsible-menu label{
             display: block;
             cursor: pointer;
+            width: 100%;
             padding: 10px 0 0 20px; 
         }
         i{
@@ -66,6 +80,7 @@
         .menu-content{
             max-height: 0;
             overflow: hidden;
+            word-wrap: normal;;
             padding: 0 0 0 40px;
         }       
         .Collapsible-menu ul{
@@ -73,6 +88,13 @@
             padding: 0;
         }         
         /*Collapsible Menu*/
+
+        #expandImg{
+            grid-area: img;
+        }
+        #longMenuInfo{
+            grid-area: info;
+        }
     </style>
 </head>
 
@@ -85,19 +107,21 @@
             <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
             <a class="aboutus" href="AboutPage.html">Ons klasje</a>
         </nav>
-        <article>
-            <section id="shortmenu">
-                <h2>Kort overzicht: </h2>
 
+        <article>
+            <h1>Menu van de week: </h1>
+
+            <section id="shortmenu">
+                <h2>Menu's: </h2>
                 <div class="Collapsible-menu">
                     <input type="checkbox" id="menu_week1">
                     <label for="menu_week1"> <i class="fas fa-sort"></i> Menu week 1</label>
                     <div class="menu-content">
                         <ul>
-                            <li> <b>Maandag:</b> aardappelen/witloof/vis</li>
-                            <li> <b>Dinsdag:</b> aardappelen/pinazie/americain</li>
-                            <li> <b>Woensdag:</b> aardappelen/tomaat/vis</li>
-                            <li> <b>Donderdag:</b> aardappelen/courgette/varkensvlees</li>
+                            <li> <b>Maandag:</b> aardappelen | witloof | vis</li>
+                            <li> <b>Dinsdag:</b> aardappelen | spinazie | americain</li>
+                            <li> <b>Woensdag:</b> aardappelen | tomaat | vis</li>
+                            <li> <b>Donderdag:</b> aardappelen | courgette | varkensvlees</li>
                         </ul>
                     </div>
                 </div>
@@ -106,10 +130,10 @@
                     <label for="menu_week2"> <i class="fas fa-sort"></i> Menu week 2</label>
                     <div class="menu-content">
                         <ul>
-                            <li> <b>Maandag:</b> aardappelen/knolselder/vis</li>
-                            <li> <b>Dinsdag:</b> aardappelen/broccoli/kip</li>
-                            <li> <b>Woensdag:</b> aardappelen/pompoen/kalfsvlees</li>
-                            <li> <b>Donderdag:</b> aardappelen/bloemkool/zalm</li>
+                            <li> <b>Maandag:</b> aardappelen | knolselder | vis</li>
+                            <li> <b>Dinsdag:</b> aardappelen | broccoli | kip</li>
+                            <li> <b>Woensdag:</b> aardappelen | pompoen | kalfsvlees</li>
+                            <li> <b>Donderdag:</b> aardappelen | bloemkool | zalm</li>
                         </ul>
                     </div>
                 </div>
@@ -118,10 +142,10 @@
                     <label for="menu_week3"> <i class="fas fa-sort"></i> Menu week 3</label>
                     <div class="menu-content">
                         <ul>
-                            <li> <b>Maandag:</b> aardappelen/snijbonen/varkensvlees</li>
-                            <li> <b>Dinsdag:</b> aardappelen/chinese kool/vis</li>
-                            <li> <b>Woensdag:</b> aardappelen/tomaat/kip</li>
-                            <li> <b>Donderdag:</b> aardappelen/wortel/rundsvlees</li>
+                            <li> <b>Maandag:</b> aardappelen | snijbonen | varkensvlees</li>
+                            <li> <b>Dinsdag:</b> aardappelen | chinese kool | vis</li>
+                            <li> <b>Woensdag:</b> aardappelen | tomaat | kip</li>
+                            <li> <b>Donderdag:</b> aardappelen | wortel | rundsvlees</li>
                         </ul>
                     </div>
                 </div>
@@ -130,29 +154,35 @@
                     <label for="menu_week4"> <i class="fas fa-sort"></i> Menu week 4</label>
                     <div class="menu-content">
                         <ul>
-                            <li> <b>Maandag:</b> aardappelen/kervel/vis</li>
-                            <li> <b>Dinsdag:</b> aardappelen/venkel/kalkoen</li>
-                            <li> <b>Woensdag:</b> aardappelen/pompoen/kalfsvlees</li>
-                            <li> <b>Donderdag:</b> aardappelen/princessen bonen/rundsvlees</li>
+                            <li> <b>Maandag:</b> aardappelen | kervel | vis</li>
+                            <li> <b>Dinsdag:</b> aardappelen | venkel | kalkoen</li>
+                            <li> <b>Woensdag:</b> aardappelen | pompoen | kalfsvlees</li>
+                            <li> <b>Donderdag:</b> aardappelen | prinsessen bonen | rundsvlees</li>
                         </ul>
                     </div>
                 </div>
-
             </section>
 
             <section id="allergies">
-                <h2>Mogelijke allergieën: </h2>
-                <ul>
-                    <li>Zuivel producten</li>
-                    <li>eieren</li>
-                    <li>Noten</li>
-                    <li>Soja</li>
-                </ul>
+                <h2>Allergieën: </h2>
+
+                <p>Als er mogelijke allergieën of andere problemen zijn met het menu. Vermeld dit dan zeker.</p>
+                <p>U kan dit in persoon doorgeven of via een <a href="">bericht</a>.</p>
             </section>
 
             <section id="longmenu">
-                <h2>Lang overzicht: </h2>
-                <img src="" alt="Foto met een uitgebreid overzicht van alle maaltijden.">
+                <div id="longMenuInfo">
+                    <h2>Lang overzicht: </h2>
+                    <p>Hier laten zijn de mogelijke voedingen zien de de kinderen kunnen verwachten vanaf een bepaalde
+                        leeftijd.</p>
+                    <p>Dit is eerder een informatieve lijst, niet alles zal noodzakelijk op het menu komen. Daarbij
+                        kunnen er nog verandering aan gebeuren</p>
+
+                    <p> <em>Klik over de foto voor een beter overzicht.</em> </p>
+                </div>
+                <a target="_blank" href="bronmateriaal/Big_menu.jpeg"><img id="expandImg" src="bronmateriaal/Big_menu.jpeg" alt="Foto met een uitgebreid overzicht van alle mogelijke maaltijden."
+                        width="300px" height="400px"></a>
+
             </section>
         </article>
 

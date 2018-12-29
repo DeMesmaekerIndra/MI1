@@ -74,14 +74,14 @@ nav>*{
 /*Navigation bar*/
 
 /*Links*/
-a:hover{    
+nav>a:hover{    
     transition-delay: 80ms;
     transform: perspective(1000px) rotateY(25deg);    
     text-decoration: underline;
     background-color: rgb(46, 177, 46);
     
 }
-a:active{
+nav>a:active{
     transition-delay: 0ms;
     background-color: rgb(62, 238, 62)
 }
