@@ -1,6 +1,5 @@
 /*Algemene indeling pagina*/
-body{
-    
+body{    
     padding: 0;
     margin: 0;    
     background-image: url("bronmateriaal/fadingBackground.jpg");       
@@ -8,9 +7,9 @@ body{
 }   
 .container{         
     display: grid;
-    grid-template-columns: 2% 92%;
+    grid-template-columns: 2% 96%;
     grid-template-rows: 100px auto auto;
-    grid-template-areas: ". menu" 
+    grid-template-areas: ". menu"                         
                          ". mainbody"
                          ". footer";
 }
@@ -89,6 +88,16 @@ nav>a:active{
     background-color: rgb(46, 177, 46);
 }
 /*Links*/
+
+/*Algemene indeling voor mainbody*/
+article{
+    grid-area: mainbody;
+    display: grid;
+}
+h1{
+    grid-area: header; 
+}
+/*Algemene indeling voor mainbody*/
 
 /*Footer*/
 footer{

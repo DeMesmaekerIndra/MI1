@@ -8,7 +8,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Stylesheet.css" />
     <style>
-              
+        article {
+            grid-template-areas: "header"
+                "inleiding"
+                "gallerij";
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+            row-gap: 20px;
+        }
+
+        #inleiding {
+            grid-area: inleiding;
+            padding: 0;
+            margin: 0;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: auto;
+
+            background-image: url("bronmateriaal/Gallery_blurred_Background.jpg");
+            background-size: cover;
+
+            border-style: ridge;
+            border-width: 8px;
+
+            padding: 0 4px;
+        }
+
+        .column {
+            flex: 25%;
+            max-width: 25%;
+
+            padding: 0;
+        }
+
+        img {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            vertical-align: middle;
+            border-style: groove;
+            border-width: 8px;
+        }
+
+        .PortraitImg {
+            max-width: 145px;
+            max-height: 250px;
+        }
+
+        .LandscapeImg {
+            max-width: 267px;
+            max-height: 200px;
+        }
+
+        img:hover {
+            cursor: pointer;
+            transform: scale(1.8);
+        }
+
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -22,6 +93,56 @@
             <a class="aboutus" href="AboutPage.html">Ons klasje</a>
         </nav>
 
+        <article>
+            <h1>Activiteiten: </h1>
+            <section id="inleiding">
+                <p>In de cribbe wordt regelmatig wel eens een feestje gevierd. Van feestdagen tot verjaardagen.</p>
+                <p>Dit gaat altijd gepaard met zelfgemaakte knutselwerkjes, meestal een kostuum voor de kindjes die ze
+                    mogen houden!</p>
+
+                <p>Hieronder is een kleine gallerij met een aantal activeiten zoals Kerstmis en Halloween!</p>
+            </section>
+
+            <section class="row">
+                <div class="column">
+                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_2.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_3.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_4.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_5.jpg" alt="">
+
+                    <img class="LandscapeImg" src="bronmateriaal/Kerstmis/Groep_Foto_Kerst_01.JPG" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_Sinterklaas_1.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_sinterklaas_3.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_Sinterklaas_4.jpg" alt="">
+
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_Sinterklaas_1.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_Sinterklaas_2.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_sinterklaas_4.jpg" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="LandscapeImg" src="bronmateriaal/Halloween/Halloween_1.jpg" alt="">
+
+                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_10.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_9.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_5.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_6.jpg" alt="">
+                </div>
+
+                <div class="column">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_1.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_2.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_3.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_4.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_5.jpg" alt="">
+
+                </div>
+            </section>
+
+        </article>
         <footer>
             <h2 id="footerHeader">Contact Informatie: </h2>
             <address id="parentCompany">
