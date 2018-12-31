@@ -4,10 +4,33 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pagina over het huidige klasje in de cribber</title>
+    <title>Pagina over het huidige klasje in de cribbe </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Stylesheet.css" />
-    
+
+    <style>
+        article {
+            grid-template-areas: "header header"
+                "infoOnthaalmoeder imgOnthaalmoeder"
+                "infoKlasje infoKlasje";
+
+            grid-template-columns: 50% auto;
+            grid-template-rows: auto auto auto;
+            column-gap: 20px;
+        }
+
+        #infoOnthaalMoeder {
+            grid-area: infoOnthaalmoeder;
+        }
+
+        #imgOnthaalmoeder {
+            grid-area: imgOnthaalmoeder;
+        }
+
+        #infoKlasje {
+            grid-area: infoKlasje;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,6 +42,35 @@
             <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
             <a class="aboutus activePage" href="AboutPage.html">Ons klasje</a>
         </nav>
+
+        <article>
+            <h1>Ons klasje</h1>
+
+            <section id="infoOnthaalMoeder">
+                <h2>Info over onthaalmoeder</h2>
+                <p>Ik ben Floridor Anne (30-07-67) gehuwd met De Mesmaeker Patrick
+                    (13–10–64). Ik heb 2 kinderen , een dochter Kaina (18-08-89) en
+                    een zoontje Indra (15-12-00).
+                    Wij zijn nederlandstalig.
+                    Roken doen we niet.
+                </p>
+                <p>
+                    Ik had graag kleuterjuffrouw willen worden. Dit is jammer genoeg
+                    nooit doorgegaan. Vandaar mijn job als onthaalmoeder.
+                    Ik zit graag tussen de kinderen. Ik doe deze job sinds 1992.
+                </p>
+            </section>
+
+            <img id="imgOnthaalmoeder" src="" alt="Foto van onthaalmoeder Anne Floridor" width="200px">
+
+            <section id="infoKlasje">
+                <h2>Info over het klasje</h2>
+                <p>De grootte van de klasjes wisselt af tussen 4 en 6 kindjes afhankelijk van de inschrijvingen.</p>
+
+                <p>De inschrijvingen kunnen vanaf de leeftijd van 4 maand.</p>
+                <p>In de afgelopen 25 jaar van mijn loopbaan heb ik al meer dan 100 kinderen opgevangen.</p>
+            </section>
+        </article>
 
         <footer>
             <h2 id="footerHeader">Contact Informatie: </h2>

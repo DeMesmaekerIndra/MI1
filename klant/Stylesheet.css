@@ -1,22 +1,24 @@
 /*Algemene indeling pagina*/
-body{    
+body {
     padding: 0;
-    margin: 0;    
-    background-image: url("bronmateriaal/fadingBackground.jpg");       
+    margin: 0;
+    background-image: url("bronmateriaal/fadingBackground.jpg");
     background-size: cover;
-}   
-.container{         
+}
+
+.container {
     display: grid;
     grid-template-columns: 2% 96%;
     grid-template-rows: 100px auto auto;
-    grid-template-areas: ". menu"                         
-                         ". mainbody"
-                         ". footer";
+    grid-template-areas: "menu menu"
+        ". mainbody"
+        ". footer";
 }
+
 /*Algemene indeling pagina*/
 
 /*Navigation bar*/
-nav{
+nav {
     position: fixed;
     width: 100%;
 
@@ -25,100 +27,195 @@ nav{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: inherit;
-    grid-template-areas: "logo home foodmenu activities aboutus";         
+    grid-template-areas: "logo home foodmenu activities aboutus";
 
-    background-color: green;   
+    background-color: green;
 
-    grid-column-gap: 5px;  
-}   
-nav>*{
+    grid-column-gap: 5px;
+}
+
+nav>* {
     background-color: lightgreen;
-    text-align: center;       
-    padding-top: 32PX;
-    
-    text-decoration: none;
-    color: black;   
-    font-size: 1.5em; 
+    text-align: center;
+    padding-top: 32px;
 
-    border-style:solid;
-    border-width: 2px; 
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+
+    border-style: solid;
+    border-width: 2px;
     border-radius: 40px;
 }
-#logo{
+
+#logo {
     grid-area: logo;
-    
+
     background-image: url("bronmateriaal/logo_kindEnGezin.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 
     border-top-left-radius: 0;
-    border-bottom-left-radius: 0;    
+    border-bottom-left-radius: 0;
 }
-.home{
+
+.home {
     grid-area: home;
 }
-.foodmenu{
+
+.foodmenu {
     grid-area: foodmenu;
 }
-.activities{
+
+.activities {
     grid-area: activities;
 }
-.aboutus{
+
+.aboutus {
     grid-area: aboutus;
 
     border-top-right-radius: 0;
-    border-bottom-right-radius: 0; 
+    border-bottom-right-radius: 0;
 }
+
 /*Navigation bar*/
 
 /*Links*/
-nav>a:hover{    
+nav>a:hover {
     transition-delay: 80ms;
-    transform: perspective(1000px) rotateY(25deg);    
+    transform: perspective(1000px) rotateY(25deg);
     text-decoration: underline;
     background-color: rgb(46, 177, 46);
-    
+
 }
-nav>a:active{
+
+nav>a:active {
     transition-delay: 0ms;
     background-color: rgb(62, 238, 62)
 }
-.activePage{
+
+.activePage {
     background-color: rgb(46, 177, 46);
 }
+
 /*Links*/
 
 /*Algemene indeling voor mainbody*/
-article{
+article {
     grid-area: mainbody;
     display: grid;
 }
-h1{
-    grid-area: header; 
+
+h1 {
+    grid-area: header;
 }
+
 /*Algemene indeling voor mainbody*/
 
 /*Footer*/
-footer{
+footer {
     display: grid;
-    grid-area: footer;  
+    grid-area: footer;
 
     grid-template-columns: 64% 36%;
     grid-template-rows: 10% auto;
-    grid-template-areas:"footerHeader footerHeader"
-                        "parentCompany childCompany"; 
-    row-gap: 20px;          
+    grid-template-areas: "footerHeader footerHeader"
+        "parentCompany childCompany";
+    row-gap: 20px;
 }
 
-#footerHeader{
+#footerHeader {
     grid-area: footerHeader;
-    font-size: 1.3em;        
+    font-size: 1.3em;
 }
-#parentCompany{
-    grid-area: parentCompany;     
+
+#parentCompany {
+    grid-area: parentCompany;
 }
-#childCompany{
+
+#childCompany {
     grid-area: childCompany;
-}  
-/*Footer*/  
+}
+
+/*Footer*/
+
+
+@media screen and (max-width: 640px) {
+
+    /*Algemene indeling*/
+
+
+    /*Algemene indeling*/
+
+    /*Navigation Bar*/
+    nav {
+        grid-template-areas: " . activePage ."
+            " .item1."
+            ". item2 ."
+            ". item3 ."
+            ". item4 ."
+            ". logo .";
+
+        grid-template-columns: 2% 96% 2%;
+        grid-template-rows: auto repeat(5, 0);
+
+
+        overflow: hidden;
+    }
+
+    .home {
+        grid-area: item1;
+    }
+
+    .foodmenu {
+        grid-area: item2;
+    }
+
+    .activities {
+        grid-area: item3;
+    }
+
+    .aboutus {
+        grid-area: item4;
+    }
+
+    .activePage {
+        background-image: url("bronmateriaal/hamburgerMenu.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 10px;
+
+        grid-area: activePage;
+    }
+
+
+    nav>a {
+        font-size: 22px;
+        width: 100%;
+        padding-bottom: 10%;
+
+        border-width: 2px;
+        border-radius: 20px;
+    }
+
+    nav>a:not(.activePage) {
+        visibility: hidden;
+    }
+
+    #logo,
+    .aboutus {
+        border-width: 2px;
+        border-radius: 20px;
+    }
+    nav:hover,
+    nav:active,
+    nav:focus {
+        grid-template-rows: repeat(6, auto);
+    }
+
+    nav:hover>a {
+        visibility: visible;
+    }
+    /*Navigation Bar*/
+}

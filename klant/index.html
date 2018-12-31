@@ -9,26 +9,27 @@
     <link rel="stylesheet" href="Stylesheet.css">
     <style>
         /*Main body*/
-        article {            
+        article {
             grid-template-columns: 100%;
             grid-template-rows: auto auto auto;
             grid-template-areas: "header"
                 "section1"
-                "section2";                
+                "section2";
         }
 
         h1 {
-            grid-area: header;            
+            grid-area: header;
         }
 
         /*Main body: section*/
         section {
             display: grid;
-            grid-template-columns: 65% 35%;
+            grid-template-columns: auto auto;
             grid-template-rows: auto auto;
             grid-template-areas: "header header"
                 "item1 item2";
-            row-gap: 20px;
+            row-gap: 15px;
+            column-gap: 20px;
         }
 
         .section1 {
@@ -48,7 +49,7 @@
         }
 
         .item2 {
-            grid-area: item2;         
+            grid-area: item2;
         }
 
         /*Main body: section*/
@@ -59,11 +60,11 @@
 <body>
     <div class="container">
         <nav>
-            <a id="logo" target="_blank" href="https://www.kindengezin.be/"></a>
-            <a class="home activePage" href="index.html"> Home </a>
-            <a class="foodmenu" href="FoodPage.html"> Menu van de week </a>
-            <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
-            <a class="aboutus" href="AboutPage.html">Ons klasje</a>
+            <a id="logo" target="_blank" href="https://www.kindengezin.be/" tabindex="5"></a>
+            <a class="home activePage" href="index.html" tabindex="1"> Home </a>
+            <a class="foodmenu" href="FoodPage.html" tabindex="2"> Menu van de week </a>
+            <a class="activities" href="ActivitiesPage.html" tabindex="3"> Activiteiten</a>
+            <a class="aboutus" href="AboutPage.html" tabindex="4">Ons klasje</a>
         </nav>
 
         <article>
@@ -102,9 +103,60 @@
             </section>
 
             <section class="section2">
-                <h2 class="sectionHeader">Anne Floridor</h2>
+                <h2 class="sectionHeader">Opvang Anne Floridor</h2>
                 <div class="item2">
-                    <p>(Informatie opvang Anne Floridor)</p>
+                    <h3>Wie ben ik?</h3>
+                    <p>Uw onthaalmoeder heet jullie van harte welkom.
+                        Ik ben Floridor Anne ( 30-07-67 ) gehuwd met De Mesmaeker Patrick
+                        ( 13–10–64 ). Ik heb 2 kinderen , een dochter Kaina ( 18-08-89 ) en
+                        een zoontje Indra ( 15-12-00 ).
+                        Wij zijn nederlandstalig.
+                        Roken doen we niet.
+                    </p>
+                    <p>
+                        Ik had graag kleuterjuffrouw willen worden. Dit is jammer genoeg
+                        nooit doorgegaan. Vandaar mijn job als onthaalmoeder.
+                        Ik zit graag tussen de kinderen. Ik doe deze job sinds 1992.
+                    </p>
+
+                    <h3>Hoe zit het met de uren?</h3>
+                    <p>
+                        Ik ben er maandag, dinsdag,woensdag en donderdag van 8.00u tot 17.00u.
+                        Vrijdag is mijn kuis en aankopendag. (vers fruit, yoghurt etc).
+                        Jullie mogen mij bellen in geval van problemen.
+                        Indien het kindje door iemand anders wordt afgehaald, gelieve mij
+                        hiervan te verwittigen.
+                    </p>
+                    <p>
+                        Ik geef jullie kindjes zomaar aan iedereen niet mee.
+                        Gelieve de kinderen tijdig te brengen ten laatste om 09.00u en tijdig
+                        te komen afhalen niet voor 16.00u, ten laatste om 17.00u.
+                        Bij regen of sneeuw vragen wij U om de kinderen uit te kleden voor het
+                        betreden van de cribbe, dit om hygiënische redenen. Denk maar even aan
+                        kruipende kindjes.
+                    </p>
+
+                    <h3>En de vakanties dan?</h3>
+                    <p> Uiteraard is vakantie ook belangrijk. Kwestie van uitrusten, nieuwe energie
+                        op te doen, genieten van de vakantie met je kindjes,… .
+                    </p>
+                    <p>
+                        Mijn verlofdagen zijn meestal :
+                    </p>
+
+                    <ul>
+                        <li> krokusvakantie of herfstvakantie</li>
+                        <li> 1 week in de paasvakantie ( April )</li>
+                        <li>4 weken in juli of augustus</li>
+                        <li>in de herfstvakantie</li>
+                        <li> 2 weken in december ( Kerstmis/Nieuwjaar )</li>
+                    </ul>
+                    <p>Jullie krijgen mijn verlofdagen eind januari mee.</p>
+
+                    <h3>Extra informatie</h3>
+
+                    <p>Voor extra informatie kan je mij <a href="">bericht</a> sturen of in het boekje kijken dat ik
+                        met de kennismaking meegeef.</p>    
                 </div>
                 <img class="item1" src="bronmateriaal/Groep_Foto_Buiten.jpg" alt="Foto van onthaalmoeder Anne Floridor met haar opvangkindjes"
                     width="350">
