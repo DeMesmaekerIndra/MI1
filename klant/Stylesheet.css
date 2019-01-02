@@ -37,11 +37,11 @@ nav {
 nav>* {
     background-color: lightgreen;
     text-align: center;
-    padding-top: 32px;
 
     text-decoration: none;
     color: black;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    padding-top: 30px;
 
     border-style: solid;
     border-width: 2px;
@@ -141,7 +141,7 @@ footer {
 /*Footer*/
 
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 720px) {
 
     /*Algemene indeling*/
 
@@ -151,15 +151,14 @@ footer {
     /*Navigation Bar*/
     nav {
         grid-template-areas: " . activePage ."
-            " .item1."
+            " .item1 ."
             ". item2 ."
             ". item3 ."
             ". item4 ."
             ". logo .";
 
         grid-template-columns: 2% 96% 2%;
-        grid-template-rows: auto repeat(5, 0);
-
+        grid-template-rows: max-content repeat(5, 0);        
 
         overflow: hidden;
     }
@@ -183,20 +182,19 @@ footer {
     .activePage {
         background-image: url("bronmateriaal/hamburgerMenu.png");
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: 10px;
+        background-size: 60px 70px;
+        background-position: 5px;
 
         grid-area: activePage;
     }
 
-
-    nav>a {
-        font-size: 22px;
+    nav>a {       
         width: 100%;
-        padding-bottom: 10%;
-
+        height: calc(100vh * 0.12);
+        line-height: calc(100vh * 0.10);
         border-width: 2px;
         border-radius: 20px;
+        padding-top:0;
     }
 
     nav>a:not(.activePage) {
@@ -208,14 +206,25 @@ footer {
         border-width: 2px;
         border-radius: 20px;
     }
+
     nav:hover,
     nav:active,
     nav:focus {
         grid-template-rows: repeat(6, auto);
     }
-
     nav:hover>a {
         visibility: visible;
     }
     /*Navigation Bar*/
+
+    /*Footer*/
+    footer{
+        grid-template-areas: "footerHeader"
+        "parentCompany"
+        "childCompany";
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        row-gap: 0;
+    }
+    /*Footer*/
 }
