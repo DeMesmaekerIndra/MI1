@@ -3,100 +3,25 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pagina met menu van de week</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Stylesheet.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="FoodPage_StyleSheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
-
-    <style>
-        /*Main Body*/
-        article {
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto auto auto;
-            grid-template-areas: "header header"
-                "shortmenu allergies"
-                "longmenu longmenu";
-            row-gap: 15px;
-        }       
-
-        #shortmenu {
-            grid-area: shortmenu;
-        }
-
-        #allergies {
-            grid-area: allergies;
-        }
-
-        #longmenu {
-            grid-area: longmenu;
-
-            display: grid;
-
-            grid-template-columns: 50% auto ;
-            grid-template-rows: auto;
-            grid-template-areas: "info . img";
-        }
-        /*Main Body*/
-
-        /*Collapsible Menu*/        
-
-        .Collapsible-menu{
-            padding: 0px 30px 0 0;  
-            width: 70%;
-            border: 1px solid black; 
-            background-color: lightgreen;                     
-        }
-        .Collapsible-menu:hover{
-            background-color: rgb(46, 177, 46);
-        }
-
-        input{
-            display: none;
-        }  
-        input:checked ~ .menu-content{
-            max-height: 100%;
-        }
-        .Collapsible-menu label{
-            display: block;
-            cursor: pointer;
-            width: 100%;
-            padding: 10px 0 0 20px; 
-        }
-        i{
-            padding-right: 5px;
-        }
-
-        .menu-content{
-            max-height: 0;
-            overflow: hidden;
-            word-wrap: normal;;
-            padding: 0 0 0 40px;
-        }       
-        .Collapsible-menu ul{
-            list-style-type: none;
-            padding: 0;
-        }         
-        /*Collapsible Menu*/
-
-        #expandImg{
-            grid-area: img;
-        }
-        #longMenuInfo{
-            grid-area: info;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <nav>
-            <a id="logo" target="_blank" href="https://www.kindengezin.be/"></a>
-            <a class="home" href="index.html"> Home </a>
-            <a class="foodmenu activePage" href="FoodPage.html"> Menu van de week </a>
-            <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
-            <a class="aboutus" href="AboutPage.html">Ons klasje</a>
+            <ul>    
+                <li id="logo"><a aria-label="Link naar de website van kind & gezin" target="_blank" href="https://www.kindengezin.be/"
+                        tabindex="5"></a></li>
+                <li class="home"><a href="index.html" tabindex="1"> Home </a></li>
+                <li class="foodmenu activePage"><a href="FoodPage.html" tabindex="2"> Menu van de week </a></li>
+                <li class="activities"><a href="ActivitiesPage.html" tabindex="3"> Activiteiten</a></li>
+                <li class="aboutus"><a href="AboutPage.html" tabindex="4">Ons klasje</a></li>
+            </ul>
         </nav>
 
         <article>
@@ -106,8 +31,8 @@
                 <h2>Menu's: </h2>
                 <div class="Collapsible-menu">
                     <input type="checkbox" id="menu_week1">
-                    <label for="menu_week1"> <i class="fas fa-sort"></i> Menu week 1</label>
-                    <div class="menu-content">
+                    <label tabindex="6" aria-label="Klik hierop om het menu van de week te zien" for="menu_week1"> <i class="fas fa-sort"></i> Menu week 1</label>
+                    <div class="menu-content" tabindex="7">
                         <ul>
                             <li> <b>Maandag:</b> aardappelen | witloof | vis</li>
                             <li> <b>Dinsdag:</b> aardappelen | spinazie | americain</li>
@@ -118,8 +43,8 @@
                 </div>
                 <div class="Collapsible-menu">
                     <input type="checkbox" id="menu_week2">
-                    <label for="menu_week2"> <i class="fas fa-sort"></i> Menu week 2</label>
-                    <div class="menu-content">
+                    <label tabindex="8" for="menu_week2" aria-label="Klik hierop om het menu van de week te zien"> <i class="fas fa-sort"></i> Menu week 2</label>
+                    <div tabindex="9" class="menu-content">
                         <ul>
                             <li> <b>Maandag:</b> aardappelen | knolselder | vis</li>
                             <li> <b>Dinsdag:</b> aardappelen | broccoli | kip</li>
@@ -130,8 +55,8 @@
                 </div>
                 <div class="Collapsible-menu">
                     <input type="checkbox" id="menu_week3">
-                    <label for="menu_week3"> <i class="fas fa-sort"></i> Menu week 3</label>
-                    <div class="menu-content">
+                    <label tabindex="10" aria-label="Klik hierop om het menu van de week te zien" for="menu_week3"> <i class="fas fa-sort"></i> Menu week 3</label>
+                    <div tabindex="11" class="menu-content">
                         <ul>
                             <li> <b>Maandag:</b> aardappelen | snijbonen | varkensvlees</li>
                             <li> <b>Dinsdag:</b> aardappelen | chinese kool | vis</li>
@@ -142,8 +67,8 @@
                 </div>
                 <div class="Collapsible-menu">
                     <input type="checkbox" id="menu_week4">
-                    <label for="menu_week4"> <i class="fas fa-sort"></i> Menu week 4</label>
-                    <div class="menu-content">
+                    <label tabindex="12" for="menu_week4" aria-label="Klik hierop om het menu van de week te zien"> <i class="fas fa-sort"></i> Menu week 4</label>
+                    <div tabindex="13" class="menu-content">
                         <ul>
                             <li> <b>Maandag:</b> aardappelen | kervel | vis</li>
                             <li> <b>Dinsdag:</b> aardappelen | venkel | kalkoen</li>
@@ -154,30 +79,30 @@
                 </div>
             </section>
 
-            <section id="allergies">
+            <section id="allergies" tabindex="14">
                 <h2>Allergieën: </h2>
 
-                <p>Als er mogelijke allergieën of andere problemen zijn met het menu. Vermeld dit dan zeker.</p>
-                <p>U kan dit in persoon doorgeven of via een <a href="">bericht</a>.</p>
+                <p>Als er mogelijke allergieën of andere problemen zijn met het menu, vermeld dit dan zeker bij de
+                    kennismaking.</p>
             </section>
 
             <section id="longmenu">
-                <div id="longMenuInfo">
+                <div id="longMenuInfo" tabindex="15">
                     <h2>Lang overzicht: </h2>
                     <p>Hier laten zijn de mogelijke voedingen zien de de kinderen kunnen verwachten vanaf een bepaalde
                         leeftijd.</p>
                     <p>Dit is eerder een informatieve lijst, niet alles zal noodzakelijk op het menu komen. Daarbij
                         kunnen er nog verandering aan gebeuren</p>
 
-                    <p> <em>Klik over de foto voor een beter overzicht.</em> </p>
+                    <p> <em>Klik op de foto voor een beter overzicht.</em> </p>
                 </div>
-                <a target="_blank" href="bronmateriaal/Big_menu.jpeg"><img id="expandImg" src="bronmateriaal/Big_menu.jpeg" alt="Foto met een uitgebreid overzicht van alle mogelijke maaltijden."
-                        width="300px" height="400px"></a>
+                <a tabindex="16" target="_blank" href="bronmateriaal/Big_menu.jpeg"><img id="expandImg" src="bronmateriaal/Big_menu.jpeg"
+                        alt="Foto met een uitgebreid overzicht van alle mogelijke maaltijden." width="300" height="400"></a>
 
             </section>
         </article>
 
-        <footer>
+        <footer tabindex="17">
             <h2 id="footerHeader">Contact Informatie: </h2>
             <address id="parentCompany">
                 <ul>

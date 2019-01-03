@@ -3,99 +3,28 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pagina met alle activiteiten</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Stylesheet.css" />
-    <style>
-        article {
-            grid-template-areas: "header"
-                "inleiding"
-                "gallerij";
-            grid-template-columns: 100%;
-            grid-template-rows: auto auto auto;
-            row-gap: 20px;
-        }
-
-        #inleiding {
-            grid-area: inleiding;
-            padding: 0;
-            margin: 0;
-        }
-
-        .row {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: auto;
-
-            background-image: url("bronmateriaal/Gallery_blurred_Background.jpg");
-            background-size: cover;
-
-            border-style: ridge;
-            border-width: 8px;
-
-            padding: 0 4px;
-        }
-
-        .column {
-            flex: 25%;
-            max-width: 25%;
-
-            padding: 0;
-        }
-
-        img {
-            margin-top: 4px;
-            margin-bottom: 4px;
-            vertical-align: middle;
-            border-style: groove;
-            border-width: 8px;
-        }
-
-        .PortraitImg {
-            max-width: 145px;
-            max-height: 250px;
-        }
-
-        .LandscapeImg {
-            max-width: 267px;
-            max-height: 200px;
-        }
-
-        img:hover {
-            cursor: pointer;
-            transform: scale(1.8);
-        }
-
-        @media screen and (max-width: 800px) {
-            .column {
-                flex: 50%;
-                max-width: 50%;
-            }
-        }
-        @media screen and (max-width: 600px) {
-            .column {
-                flex: 100%;
-                max-width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" media="screen" href="Activities_Stylesheet.css" />
 </head>
 
 <body>
     <div class="container">
         <nav>
-            <a id="logo" target="_blank" href="https://www.kindengezin.be/"></a>
-            <a class="home" href="index.html"> Home </a>
-            <a class="foodmenu" href="FoodPage.html"> Menu van de week </a>
-            <a class="activities activePage" href="ActivitiesPage.html"> Activiteiten</a>
-            <a class="aboutus" href="AboutPage.html">Ons klasje</a>
+            <ul>
+                <li id="logo"><a aria-label="Link naar de website van kind & gezin" target="_blank" href="https://www.kindengezin.be/"
+                        tabindex="5"></a></li>
+                <li class="home"><a href="index.html" tabindex="1"> Home </a></li>
+                <li class="foodmenu"><a href="FoodPage.html" tabindex="2"> Menu van de week </a></li>
+                <li class="activities activePage"><a href="ActivitiesPage.html" tabindex="3"> Activiteiten</a></li>
+                <li class="aboutus"><a href="AboutPage.html" tabindex="4">Ons klasje</a></li>
+            </ul>
         </nav>
 
         <article>
             <h1>Activiteiten: </h1>
-            <section id="inleiding">
+            <section id="inleiding" tabindex="6">
                 <p>In de cribbe wordt regelmatig wel eens een feestje gevierd. Van feestdagen tot verjaardagen.</p>
                 <p>Dit gaat altijd gepaard met zelfgemaakte knutselwerkjes, meestal een kostuum voor de kindjes die ze
                     mogen houden!</p>
@@ -104,46 +33,45 @@
             </section>
 
             <section class="row">
-                <div class="column">
-                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_2.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_3.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_4.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_5.jpg" alt="">
+                <div class="column" tabindex="7">
+                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_2.jpg" alt="1ste Foto van kindje verkleed als rendier">
+                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_3.jpg" alt="2de Foto van kindje verkleed als rendier">
+                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_4.jpg" alt="3de Foto van kindje verkleed als rendier">
+                    <img class="PortraitImg" src="bronmateriaal/Kerstmis/Edin_kerst_5.jpg" alt="4de Foto van kindje verkleed als rendier">
 
-                    <img class="LandscapeImg" src="bronmateriaal/Kerstmis/Groep_Foto_Kerst_01.JPG" alt="">
+                    <img class="LandscapeImg" src="bronmateriaal/Kerstmis/Groep_Foto_Kerst_01.JPG" alt="Groep foto van klasje voor Kerstmis">
                 </div>
 
-                <div class="column">
-                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_Sinterklaas_1.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_sinterklaas_3.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_Sinterklaas_4.jpg" alt="">
+                <div class="column" tabindex="8">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_Sinterklaas_1.jpg" alt="1ste foto van kindje verkleed als zwarte piet">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_sinterklaas_3.jpg" alt="2de foto van kindje verkleed als zwarte piet">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Edin_sinterklaas_4.jpg" alt="3de foto van kindje verkleed als zwarte piet">
 
-                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_Sinterklaas_1.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_Sinterklaas_2.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_sinterklaas_4.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_Sinterklaas_1.jpg" alt="1ste foto van kindje met mijter van Sinterklaas">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_Sinterklaas_2.jpg" alt="2de foto van kindje met mijter van Sinterklaas">
+                    <img class="PortraitImg" src="bronmateriaal/Sinterklaas/Juliette_sinterklaas_4.jpg" alt="3de foto van kindje met mijter van Sinterklaas">
                 </div>
 
-                <div class="column">
-                    <img class="LandscapeImg" src="bronmateriaal/Halloween/Halloween_1.jpg" alt="">
+                <div class="column" tabindex="9">
+                    <img class="LandscapeImg" src="bronmateriaal/Halloween/Halloween_1.jpg" aria-describedby="2 kindjes verkleed als tovenaar, samen met een tovenaars diploma voor Halloween">
 
-                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_10.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_9.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_5.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_6.jpg" alt="">
+                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_10.jpg" alt="Foto van kindje met tovenaarshoed op">
+                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_9.jpg" alt="Foto van onthaalmoeder met tovenaarshoed en een verkleed kindje">
+                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_5.jpg" alt="1ste Foto van 1 kindje verkleed als tovenaar met tovenaarsdiploma">
+                    <img class="PortraitImg" src="bronmateriaal/Halloween/Halloween_6.jpg" alt="2de Foto van 1 kindje verkleed als tovenaar met tovenaarsdiploma">
                 </div>
 
-                <div class="column">
-                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_1.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_2.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_3.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_4.jpg" alt="">
-                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_5.jpg" alt="">
-
+                <div class="column" tabindex="10">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_School_1.jpg" alt="1ste Foto van kindje met diploma, klaar voor de kleuterschool">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_school_2.jpg" alt="2de Foto van kindje met diploma, klaar voor de kleuterschool">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_school_3.jpg" alt="Close up van het diploma">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_school_4.jpg" alt="Foto van kindje met de onthaalmoeder">
+                    <img class="PortraitImg" src="bronmateriaal/NaarSchool/Naar_school_5.jpg" alt="Foto van kindje die een kus op de wang van de onthaalmoeder geeft">
                 </div>
             </section>
 
         </article>
-        <footer>
+        <footer tabindex="11">
             <h2 id="footerHeader">Contact Informatie: </h2>
             <address id="parentCompany">
                 <ul>

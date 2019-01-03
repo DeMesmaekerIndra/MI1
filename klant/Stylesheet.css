@@ -1,8 +1,10 @@
-/*Algemene indeling pagina*/
+/*##########################################
+        Algemene indeling pagina
+##########################################*/
 body {
     padding: 0;
     margin: 0;
-    background-image: url("bronmateriaal/fadingBackground.jpg");
+    background-image: url(bronmateriaal/fadingBackground.jpg);
     background-size: cover;
 }
 
@@ -15,49 +17,39 @@ body {
         ". footer";
 }
 
-/*Algemene indeling pagina*/
-
-/*Navigation bar*/
+/*##########################################
+                Navigation bar
+##########################################*/
 nav {
     position: fixed;
     width: 100%;
 
     grid-area: menu;
+    height: calc(100vh * 0.10);
+}
 
+nav>ul {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: inherit;
+    grid-template-rows: 10vh;
     grid-template-areas: "logo home foodmenu activities aboutus";
 
     background-color: green;
 
     grid-column-gap: 5px;
-}
 
-nav>* {
-    background-color: lightgreen;
-    text-align: center;
-
-    text-decoration: none;
-    color: black;
-    font-size: 1.3em;
-    padding-top: 30px;
-
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 40px;
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
 }
 
 #logo {
     grid-area: logo;
 
-    background-image: url("bronmateriaal/logo_kindEnGezin.png");
+    background-image: url(bronmateriaal/logo_kindEnGezin.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
 }
 
 .home {
@@ -74,34 +66,68 @@ nav>* {
 
 .aboutus {
     grid-area: aboutus;
+}
 
+nav>ul>li {
+    background-color: lightgreen;
+    text-align: center;
+
+    padding-top: calc(10vh / 4);
+
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 40px;
+
+    display: grid;
+
+    grid-template-areas: "link";
+    grid-template-columns: 100%;
+    padding-top: 0;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    width: 1fr;
+
+    width: 100%;
+    grid-area: link;
+
+    border-radius: 40px;
+
+    padding-top: 18px;
+}
+
+#logo,
+#logo>a {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.aboutus,
+.aboutus>a {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-/*Navigation bar*/
-
-/*Links*/
-nav>a:hover {
+nav>ul>li:hover {
     transition-delay: 80ms;
     transform: perspective(1000px) rotateY(25deg);
     text-decoration: underline;
-    background-color: rgb(46, 177, 46);
-
 }
 
-nav>a:active {
-    transition-delay: 0ms;
+.activePage, nav>ul>li:hover {
+    background-color: rgb(46, 177, 46);
+}
+
+nav>ul>li>a:active {
     background-color: rgb(62, 238, 62)
 }
 
-.activePage {
-    background-color: rgb(46, 177, 46);
-}
-
-/*Links*/
-
-/*Algemene indeling voor mainbody*/
+/*##########################################
+        Algemene opmaak voor mainBody               
+##########################################*/
 article {
     grid-area: mainbody;
     display: grid;
@@ -109,11 +135,23 @@ article {
 
 h1 {
     grid-area: header;
+    font-size: 35px;
 }
 
-/*Algemene indeling voor mainbody*/
+h2 {
+    font-size: 25px;
+}
 
-/*Footer*/
+h1,
+h2,
+p,
+a {
+    font-family: cambria, sans-serif;
+}
+
+/*##########################################
+                Footer
+##########################################*/
 footer {
     display: grid;
     grid-area: footer;
@@ -138,18 +176,15 @@ footer {
     grid-area: childCompany;
 }
 
-/*Footer*/
-
-
+/*##########################################
+            Opmaak kleinere schermen
+##########################################*/
 @media screen and (max-width: 720px) {
 
-    /*Algemene indeling*/
-
-
-    /*Algemene indeling*/
-
-    /*Navigation Bar*/
-    nav {
+    /*##########################################
+                    Navigation bar
+    ##########################################*/
+    nav>ul {
         grid-template-areas: " . activePage ."
             " .item1 ."
             ". item2 ."
@@ -158,7 +193,7 @@ footer {
             ". logo .";
 
         grid-template-columns: 2% 96% 2%;
-        grid-template-rows: max-content repeat(5, 0);        
+        grid-template-rows: auto repeat(5, 0);
 
         overflow: hidden;
     }
@@ -180,7 +215,7 @@ footer {
     }
 
     .activePage {
-        background-image: url("bronmateriaal/hamburgerMenu.png");
+        background-image: url(bronmateriaal/HamburgerMenu.png);
         background-repeat: no-repeat;
         background-size: 60px 70px;
         background-position: 5px;
@@ -188,43 +223,49 @@ footer {
         grid-area: activePage;
     }
 
-    nav>a {       
-        width: 100%;
-        height: calc(100vh * 0.12);
-        line-height: calc(100vh * 0.10);
-        border-width: 2px;
-        border-radius: 20px;
-        padding-top:0;
+    .activePage>a {
+        margin-left: 70px;
+        width: calc(100% - 70px);
     }
 
-    nav>a:not(.activePage) {
+    nav>ul>li {
+        width: 100%;
+        height: calc(100vh * 0.12);
+        line-height: calc(100vh * 0.08);
+        padding-top: 0;
+    }
+
+    nav>ul>li:not(.activePage) {
         visibility: hidden;
     }
 
+    nav>ul>li,
+    nav>ul>li>a,
     #logo,
     .aboutus {
         border-width: 2px;
         border-radius: 20px;
     }
 
-    nav:hover,
-    nav:active,
-    nav:focus {
+    nav>ul:hover,
+    nav>ul:active,
+    nav>ul:focus {
         grid-template-rows: repeat(6, auto);
     }
-    nav:hover>a {
+
+    nav>ul:hover>li {
         visibility: visible;
     }
-    /*Navigation Bar*/
 
-    /*Footer*/
-    footer{
+    /*##########################################
+                        Footer
+    ##########################################*/
+    footer {
         grid-template-areas: "footerHeader"
-        "parentCompany"
-        "childCompany";
+            "parentCompany"
+            "childCompany";
         grid-template-columns: 100%;
         grid-template-rows: auto;
         row-gap: 0;
     }
-    /*Footer*/
 }

@@ -1,0 +1,80 @@
+/*##########################################
+            Indeling voor Main Body
+##########################################*/
+article {
+    grid-template-areas: "header"
+        "inleiding";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    row-gap: 20px;
+}
+
+#inleiding {
+    grid-area: inleiding;
+    padding: 0;
+    margin: 0;
+}
+
+/*##########################################
+            Indeling voor gallerij
+##########################################*/
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+
+    background-image: url(bronmateriaal/Gallery_blurred_Background.jpg);
+    background-size: cover;
+
+    border-style: ridge;
+    border-width: 8px;
+
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+
+    padding: 0;
+}
+
+img {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+    border-style: groove;
+    border-width: 8px;
+}
+
+.PortraitImg {
+    max-width: 145px;
+    max-height: 250px;
+}
+
+.LandscapeImg {
+    max-width: 267px;
+    max-height: 200px;
+}
+
+img:hover {
+    cursor: pointer;
+    transform: scale(1.8);
+}
+
+/*##########################################
+            Opmaak kleinere schermen
+##########################################*/
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

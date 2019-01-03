@@ -1,0 +1,39 @@
+/*##########################################
+            Indeling voor Main Body
+##########################################*/
+article {
+    grid-template-areas: "header header"
+        "infoOnthaalmoeder imgOnthaalmoeder"
+        "infoKlasje infoKlasje";
+
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 20px;
+}
+
+#infoOnthaalMoeder {
+    grid-area: infoOnthaalmoeder;
+}
+
+#imgOnthaalmoeder {
+    grid-area: imgOnthaalmoeder;
+}
+
+#infoKlasje {
+    grid-area: infoKlasje;
+}
+
+/*##########################################
+            Opmaak kleinere schermen
+##########################################*/
+@media screen and (max-width: 720px){
+    article{
+        grid-template-areas: "header"
+        "infoOnthaalmoeder"
+        "imgOnthaalmoeder"
+        "infoKlasje";
+
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+}

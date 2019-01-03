@@ -2,8 +2,7 @@
 <html lang="nl">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />    
     <title>Thuis pagina</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Stylesheet.css">
@@ -13,17 +12,20 @@
 <body>
     <div class="container">
         <nav>
-            <a id="logo" target="_blank" href="https://www.kindengezin.be/" tabindex="5"></a>
-            <a class="home activePage" href="index.html" tabindex="1"> Home </a>
-            <a class="foodmenu" href="FoodPage.html" tabindex="2"> Menu van de week </a>
-            <a class="activities" href="ActivitiesPage.html" tabindex="3"> Activiteiten</a>
-            <a class="aboutus" href="AboutPage.html" tabindex="4">Ons klasje</a>
+            <ul>
+                <li id="logo"><a aria-label="Link naar de website van kind & gezin" target="_blank" href="https://www.kindengezin.be/"
+                        tabindex="5"></a></li>
+                <li class="home activePage"><a href="index.html" tabindex="1"> Home </a></li>
+                <li class="foodmenu"><a href="FoodPage.html" tabindex="2"> Menu van de week </a></li>
+                <li class="activities"><a href="ActivitiesPage.html" tabindex="3"> Activiteiten</a></li>
+                <li class="aboutus"><a href="AboutPage.html" tabindex="4">Ons klasje</a></li>
+            </ul>
         </nav>
 
         <article>
             <h1> Home Pagina</h1>
 
-            <section class="section1">
+            <section class="section1" tabindex="6">
                 <h2 class="sectionHeader"> Opvang Kind & Gezin</h2>
                 <div class="item1">
                     <p>
@@ -52,10 +54,10 @@
                 </div>
 
                 <img class="item2" src="bronmateriaal/Opvang_welpenNest.jpg" alt="Foto van de kind en gezin afdeling in Sint-Pieters-Leeuw, het Welpennest."
-                    width="450  ">
+                    width="450">
             </section>
 
-            <section class="section2">
+            <section class="section2" tabindex="7">
                 <h2 class="sectionHeader">Opvang Anne Floridor</h2>
                 <div class="item2">
                     <h3>Wie ben ik?</h3>
@@ -108,16 +110,16 @@
 
                     <h3>Extra informatie</h3>
 
-                    <p>Voor extra informatie kan je mij <a href="">bericht</a> sturen of in het boekje kijken dat ik
-                        met de kennismaking meegeef.</p>    
+                    <p>Voor extra informatie kan je mij een mailtje sturen of in het boekje kijken dat ik
+                        met de kennismaking meegeef.</p>
                 </div>
                 <img class="item1" src="bronmateriaal/Groep_Foto_Buiten.jpg" alt="Foto van onthaalmoeder Anne Floridor met haar opvangkindjes"
-                width="350">
+                    width="350">
                 <div class="image"></div>
             </section>
         </article>
 
-        <footer>
+        <footer tabindex="8">
             <h2 id="footerHeader">Contact Informatie: </h2>
             <address id="parentCompany">
                 <ul>

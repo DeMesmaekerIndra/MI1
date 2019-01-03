@@ -3,50 +3,29 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pagina over het huidige klasje in de cribbe </title>
+    <title>Pagina over het huidige klasje in de cribbe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Stylesheet.css" />
-
-    <style>
-        article {
-            grid-template-areas: "header header"
-                "infoOnthaalmoeder imgOnthaalmoeder"
-                "infoKlasje infoKlasje";
-
-            grid-template-columns: 50% auto;
-            grid-template-rows: auto auto auto;
-            column-gap: 20px;
-        }
-
-        #infoOnthaalMoeder {
-            grid-area: infoOnthaalmoeder;
-        }
-
-        #imgOnthaalmoeder {
-            grid-area: imgOnthaalmoeder;
-        }
-
-        #infoKlasje {
-            grid-area: infoKlasje;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" media="screen" href="Stylesheet.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="AboutUs_Stylesheet.css" />
 </head>
 
 <body>
     <div class="container">
         <nav>
-            <a id="logo" target="_blank" href="https://www.kindengezin.be/"></a>
-            <a class="home" href="index.html"> Home </a>
-            <a class="foodmenu" href="FoodPage.html"> Menu van de week </a>
-            <a class="activities" href="ActivitiesPage.html"> Activiteiten</a>
-            <a class="aboutus activePage" href="AboutPage.html">Ons klasje</a>
+            <ul>
+                <li id="logo"><a aria-label="Link naar de website van kind & gezin" target="_blank" href="https://www.kindengezin.be/"
+                        tabindex="5"></a></li>
+                <li class="home"><a href="index.html" tabindex="1"> Home </a></li>
+                <li class="foodmenu"><a href="FoodPage.html" tabindex="2"> Menu van de week </a></li>
+                <li class="activities"><a href="ActivitiesPage.html" tabindex="3"> Activiteiten</a></li>
+                <li class="aboutus activePage"><a href="AboutPage.html" tabindex="4">Ons klasje</a></li>
+            </ul>
         </nav>
 
         <article>
             <h1>Ons klasje</h1>
 
-            <section id="infoOnthaalMoeder">
+            <section id="infoOnthaalMoeder" tabindex="6">
                 <h2>Info over onthaalmoeder</h2>
                 <p>Ik ben Floridor Anne (30-07-67) gehuwd met De Mesmaeker Patrick
                     (13–10–64). Ik heb 2 kinderen , een dochter Kaina (18-08-89) en
@@ -61,9 +40,10 @@
                 </p>
             </section>
 
-            <img id="imgOnthaalmoeder" src="" alt="Foto van onthaalmoeder Anne Floridor" width="200px">
+            <img tabindex="7" id="imgOnthaalmoeder" src="bronmateriaal/Anne_Floridor.jpg" alt="Foto van onthaalmoeder Anne Floridor"
+                width="200">
 
-            <section id="infoKlasje">
+            <section id="infoKlasje" tabindex="8">
                 <h2>Info over het klasje</h2>
                 <p>De grootte van de klasjes wisselt af tussen 4 en 6 kindjes afhankelijk van de inschrijvingen.</p>
 
@@ -72,7 +52,7 @@
             </section>
         </article>
 
-        <footer>
+        <footer tabindex="9">
             <h2 id="footerHeader">Contact Informatie: </h2>
             <address id="parentCompany">
                 <ul>

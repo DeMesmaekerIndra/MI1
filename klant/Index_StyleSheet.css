@@ -1,73 +1,76 @@
-/*Main body*/
-        article {
-            grid-template-columns: 100%;
-            grid-template-rows: auto auto auto;
-            grid-template-areas: "header"
-                "section1"
-                "section2";
-        }
+/*##########################################
+            Indeling voor Main Body
+##########################################*/
+article {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header"
+        "section1"
+        "section2";
+}
 
-        h1 {
-            grid-area: header;
-        }
+/*##########################################
+            Indeling van de sections
+##########################################*/
+section {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header header"
+        "item1 item2";
+    row-gap: 15px;
+    column-gap: 20px;
+}
 
-        /*Main body: section*/
-        section {
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: auto auto;
-            grid-template-areas: "header header"
-                "item1 item2";
-            row-gap: 15px;
-            column-gap: 20px;
-        }
+.section1 {
+    grid-area: section1;
+}
 
-        .section1 {
-            grid-area: section1;
-        }
+.section2 {
+    grid-area: section2;
+}
 
-        .section2 {
-            grid-area: section2;
-        }
+.sectionHeader {
+    grid-area: header;
+}
 
-        .sectionHeader {
-            grid-area: header;
-        }
+.item1 {
+    grid-area: item1;
+}
 
-        .item1 {
-            grid-area: item1;
-        }
+.item2 {
+    grid-area: item2;
+}
 
-        .item2 {
-            grid-area: item2;
-        }
+/*##########################################
+            Opmaak kleinere schermen
+##########################################*/
 
-        /*Main body: section*/
-        /*Main Body*/
+@media screen and (max-width: 720px) {
+    /*##########################################
+            Indeling van de sections
+    ##########################################*/
+    section {
+        grid-template-areas: "header"
+            "item1"
+            "item2";
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+    }
 
-        @media screen and (max-width: 720px) {
-            section{
-                grid-template-areas: "header"
-                "item1"
-                "item2";
-                grid-template-columns: 100%;
-                grid-template-rows: repeat(3, auto);
-            }
+    .section1>img {
+        width: 100%;
+        height: calc(100vw / 1.9);
 
-            .section1>img{
-                width: 100%;
-                height: calc(100vw / 1.9);
+        max-width: 360px;
+        max-height: 190px;
+    }
 
-                max-width: 360px;
-                max-height: 190px;
-            }
+    .section2>img {
+        width: 100%;
+        height: calc(100vw / 0.6);
 
-            .section2>img{
-
-                width: 100%;
-                height: calc(100vw / 0.6);
-
-                max-width: 360px;
-                max-height: 600px;
-            }
-        }
+        max-width: 360px;
+        max-height: 600px;
+    }
+}
